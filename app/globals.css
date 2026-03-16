@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- EGYEDI SEGÉDOSZTÁLYOK --- */
+
+/* Görgetősáv elrejtése a TikTok hatású sliderhez */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE és Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari és Opera */
+}
+
+/* Sima görgetés az egész oldalon, ha mondjuk egy gomb levisz a footerbe */
+html {
+  scroll-behavior: smooth;
+}
