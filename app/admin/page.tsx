@@ -10,10 +10,13 @@ export default function AdminLogin() {
   const router = useRouter();
 
   const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault(); // Megakadályozza az oldal újratöltését
+    e.preventDefault(); 
     
-    // Egyszerű ellenőrzés a demo kedvéért
-    if (username === 'admin' && password === 'admin123') {
+    // A .trim() leveszi a véletlen szóközöket, amit a mobil billentyűzet betesz!
+    const cleanUsername = username.trim();
+    const cleanPassword = password.trim();
+
+    if (cleanUsername === 'admin' && cleanPassword === 'admin123') {
       router.push('/admin/dashboard');
     } else {
       setError('Hibás felhasználónév vagy jelszó!');
@@ -24,7 +27,7 @@ export default function AdminLogin() {
     <div className="min-h-screen bg-zinc-950 flex items-center justify-center p-4">
       <div className="w-full max-w-md border border-white/10 bg-black p-8 shadow-2xl">
         <div className="text-center mb-10">
-          <h1 className="text-2xl font-serif tracking-widest text-white mb-2">AT&HARMONIES</h1>
+          <h1 className="text-2xl font-serif tracking-widest text-white mb-2">A <span className="text-gray-500 italic">&</span> H</h1>
           <p className="text-xs text-gray-500 uppercase tracking-widest">Adminisztrációs Rendszer</p>
         </div>
 
@@ -59,7 +62,7 @@ export default function AdminLogin() {
             type="submit" 
             className="w-full bg-white text-black font-bold py-3 uppercase text-xs tracking-widest hover:bg-gray-200 transition-colors mt-4"
           >
-            Belépés a vezérlőpultba
+            Belépés
           </button>
         </form>
       </div>
