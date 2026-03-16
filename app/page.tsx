@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState } from 'react';
@@ -29,14 +30,14 @@ export default function HomePage() {
           </span>
         </div>
         
-        {/* Asztali Menüpontok */}
+        {/* Asztali Menüpontok (FRISSÍTVE) */}
         <nav className="hidden xl:flex gap-6 text-[11px] uppercase tracking-widest text-purple-200 font-semibold">
-          <Link href="/termekek" className="hover:text-white transition-colors">Termékek</Link>
-          <Link href="/orgon-generatorok" className="hover:text-white transition-colors">Orgon Generátorok</Link>
-          <Link href="/orgon-info" className="hover:text-white transition-colors">Orgon Információ</Link>
+          <Link href="/nyaklanc" className="hover:text-white transition-colors">Nyaklánc</Link>
+          <Link href="/karperec" className="hover:text-white transition-colors">Karperec</Link>
+          <Link href="/orgonit" className="hover:text-white transition-colors">Orgonit</Link>
+          <Link href="/kellekek" className="hover:text-white transition-colors">Kellékek / Eszközök</Link>
           <Link href="/ki-vagyok" className="hover:text-white transition-colors">Ki vagyok</Link>
           <Link href="/kapcsolat" className="hover:text-white transition-colors">Kapcsolat</Link>
-          <Link href="/aszf" className="hover:text-white transition-colors">ÁSZF</Link>
         </nav>
         
         {/* Kosár */}
@@ -46,7 +47,7 @@ export default function HomePage() {
         </button>
       </header>
 
-      {/* --- TELJES KÉPERNYŐS MOBIL MENÜ (Lila-fekete átmenet) --- */}
+      {/* --- TELJES KÉPERNYŐS MOBIL MENÜ (FRISSÍTVE) --- */}
       {isMenuOpen && (
         <div className="fixed inset-0 z-[100] bg-gradient-to-b from-purple-950 to-black backdrop-blur-2xl flex flex-col">
           <div className="p-4 flex justify-between items-center border-b border-purple-800/30">
@@ -58,19 +59,21 @@ export default function HomePage() {
             </button>
           </div>
           <nav className="flex flex-col items-center justify-center flex-1 gap-8 text-lg uppercase tracking-[0.2em] text-gray-300">
-            <Link href="/termekek" onClick={() => setIsMenuOpen(false)} className="hover:text-white transition-colors">Termékek</Link>
-            <Link href="/orgon-generatorok" onClick={() => setIsMenuOpen(false)} className="hover:text-white transition-colors text-center">Orgon Generátorok</Link>
-            <Link href="/orgon-info" onClick={() => setIsMenuOpen(false)} className="hover:text-white transition-colors text-center text-sm">Orgon Információ</Link>
+            <Link href="/nyaklanc" onClick={() => setIsMenuOpen(false)} className="hover:text-white transition-colors">Nyaklánc</Link>
+            <Link href="/karperec" onClick={() => setIsMenuOpen(false)} className="hover:text-white transition-colors">Karperec</Link>
+            <Link href="/orgonit" onClick={() => setIsMenuOpen(false)} className="hover:text-white transition-colors">Orgonit</Link>
+            <Link href="/kellekek" onClick={() => setIsMenuOpen(false)} className="hover:text-white transition-colors text-center">Kellékek / Eszközök</Link>
             <Link href="/ki-vagyok" onClick={() => setIsMenuOpen(false)} className="hover:text-white transition-colors">Ki vagyok</Link>
             <Link href="/kapcsolat" onClick={() => setIsMenuOpen(false)} className="hover:text-white transition-colors">Kapcsolat</Link>
-            <Link href="/aszf" onClick={() => setIsMenuOpen(false)} className="hover:text-white transition-colors">ÁSZF</Link>
+            <Link href="/aszf" onClick={() => setIsMenuOpen(false)} className="hover:text-white transition-colors text-xs text-gray-500">ÁSZF</Link>
+            
             <div className="w-12 h-[1px] bg-purple-500/30 my-4"></div>
             <Link href="/admin" className="text-xs text-purple-600 hover:text-purple-400 transition-colors">Vezérlőpult</Link>
           </nav>
         </div>
       )}
 
-      {/* --- HERO SZEKCIÓ (Fekete alapon) --- */}
+      {/* --- HERO SZEKCIÓ --- */}
       <section className="relative px-6 py-24 md:py-32 flex flex-col items-center text-center overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-purple-900/10 blur-[120px] rounded-full -z-10"></div>
         
@@ -98,7 +101,7 @@ export default function HomePage() {
             </video>
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-6 md:p-8 w-full">
-              <span className="bg-purple-900 text-white text-[9px] px-2 py-1 uppercase tracking-widest mb-3 inline-block rounded-sm">Orgon Generátor</span>
+              <span className="bg-purple-900 text-white text-[9px] px-2 py-1 uppercase tracking-widest mb-3 inline-block rounded-sm">Orgonit</span>
               <h4 className="text-xl md:text-2xl font-serif mb-2 text-white">Térharmonizáló Piramis</h4>
               <p className="text-xs md:text-sm text-gray-400 mb-6 font-light line-clamp-2">Hegyikristály, rézforgács és ametiszt tökéletes szinergiája.</p>
               <button className="w-full bg-white text-black hover:bg-purple-600 hover:text-white py-3 text-xs uppercase tracking-widest font-bold transition-all rounded-sm">
@@ -113,7 +116,7 @@ export default function HomePage() {
             </video>
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-6 md:p-8 w-full">
-              <span className="bg-purple-900 text-white text-[9px] px-2 py-1 uppercase tracking-widest mb-3 inline-block rounded-sm">Ékszer</span>
+              <span className="bg-purple-900 text-white text-[9px] px-2 py-1 uppercase tracking-widest mb-3 inline-block rounded-sm">Nyaklánc</span>
               <h4 className="text-xl md:text-2xl font-serif mb-2 text-white">Lélekvédő Medál</h4>
               <p className="text-xs md:text-sm text-gray-400 mb-6 font-light line-clamp-2">Fekete turmalinnal öntött személyes védelmező.</p>
               <button className="w-full bg-transparent border border-white text-white hover:bg-white hover:text-black py-3 text-xs uppercase tracking-widest font-bold transition-all rounded-sm">
