@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// --- TERMÉKEK TÁBLA ---
+model Product {
+  id          String   @id @default(uuid())
+  name        String   // Pl: Gaia Magja
+  category    String   // Pl: orgonit, nyaklanc, karperec
+  price       Int      // Pl: 24990
+  description String?  // Leírás
+  imageUrl    String?  // A kép linkje
+  createdAt   DateTime @default(now())
+}
+
+// --- FŐOLDALI VIDEÓK TÁBLA ---
+model Video {
+  id          String   @id @default(uuid())
+  title       String   // Pl: Föld Anya Nyakék videó
+  url         String   // A videó linkje (mp4)
+  description String?  // Szöveg a videó alatt
+  isActive    Boolean  @default(true) // Megjelenjen-e a főoldalon?
+  createdAt   DateTime @default(now())
+}
