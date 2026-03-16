@@ -1,0 +1,24 @@
+# Függőségek
+/node_modules
+/.pnp
+.pnp.js
+
+# Next.js build fájlok
+/.next/
+/out/
+
+# Produkciós fájlok
+/build
+
+# Egyéb rendszerfájlok
+.DS_Store
+*.pem
+
+# Logok
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Környezeti változók (Titkos kulcsok sose menjenek a GitHubra!)
+.env*.local
+.env
